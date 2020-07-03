@@ -1,0 +1,20 @@
+// Variables
+$main-color: rgb(88, 59, 100);
+$secondary-color: rgb(197, 143, 183);
+$light-color: rgb(203, 204, 250);
+$dark-color: rgb(121, 114, 122);
+$btn-inp-a-color: rgb(218, 177, 184);
+$main-font: 'Metal Mania', cursive;
+$normal-font:'Dancing Script', cursive;
+
+
+// Set text color
+@function set-text-color($color){
+    @if(lightness($color) > 50){
+        @return black;
+    }@else{
+        @return #ffffff;
+    }
+}
+
+

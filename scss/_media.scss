@@ -1,0 +1,359 @@
+@media (min-width: 1200px) {
+    #header {
+      &-home {
+        .header-content {
+          h1 {
+            font-weight: 100;
+            font-size: 4.2rem;
+            line-height: 1.5rem;
+            padding: 1rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .lead {
+      margin-bottom: 1.5rem;
+      line-height: 1.5rem;
+    }
+  
+    #header {
+      &-home {
+        .header-content {
+          h1 {
+            font-weight: 100;
+            font-size: 2.2rem;
+            line-height: 1.5rem;
+            padding: 1rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .container {
+      padding: 1rem 0;
+    }
+  
+    .main-nav {
+      justify-content: center;
+      flex-direction: column;
+    
+        li {
+          margin: 0.2rem;
+
+          &:last-child {
+            border: none;
+            padding-bottom: 0;
+          }
+        }
+    }
+  
+    #header {
+      &-home {
+        .header-content {
+          h1 {
+            font-weight: 100;
+            font-size: 1.15rem;
+            line-height: 1.5rem;
+            padding: 1rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+
+//   Tablets & Smaller devices
+
+@media (max-width:800px) {
+    // HEADER
+    #header{
+        &-home{
+            height: 30rem;
+        
+        }
+        &-inner{
+          height: 11rem;
+          .main-nav{
+            display: flex;
+            flex-direction: column;
+
+          }
+        }
+    }
+
+
+   
+    #home-a .specials,
+    #home-b .states,
+    #home-c .process,
+    #about-c .testimonials{
+      grid-template-columns: repeat(2, 1fr);
+    } 
+
+    // HOME PAGE
+    // Section-b
+    #home{
+      &-b{
+        .states >div{
+          border-bottom: 1px dotted #333;
+          &:nth-child(3),
+          &:nth-child(4){
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+
+    // WORK PAGE
+    #work-a{
+      margin-top: 0.5rem;
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0.3rem;
+
+      .item-text{
+        font-size: 1.3rem;
+        padding-top: 18%;
+      }
+
+    
+      .item:last-child{
+        
+        grid-column: 1/ span 2;
+        .item-text{
+          padding-top: 9%;
+        }
+      
+      }
+
+
+
+    }
+    
+    // CONTACT PAGE
+    #contact{
+      &-a{
+        .text-fields {
+          display: grid;
+          grid-template-areas:
+            'name'
+            'subject'
+            'phone'
+            'email'
+            'message';
+
+         
+          grid-gap: 1.2rem;
+          padding: 1rem;
+        }
+      }
+
+
+      &-c {
+        h1 {
+          font-size: 1.35rem;
+          padding: 0;
+        }
+      }      
+    }
+
+
+
+    // FOOTER
+    #main-footer {
+  
+      height: 7rem;
+    
+      .footer-content {
+        height: auto;
+        flex-direction: column;
+        line-height: 2rem;
+  
+      }
+    }
+
+
+}
+
+
+
+
+
+// SMARTPHONES
+@media (max-width:500px) {
+  // HEADER
+  #header{
+      &-home{
+          height: 60vh;
+          .header-content {
+
+            h1 {
+              font-size: 1.3rem;
+            
+              padding: 0;
+              letter-spacing: 0.3px;
+            }
+            .lead{
+              font-size: 1.2rem;
+              line-height: 1.5rem;
+
+            }
+          }
+          
+      }
+
+
+
+      &-inner{
+        height: 18rem;
+ 
+      }
+  }
+
+
+
+  // HOME PAGE
+  #home-a .specials,
+  #home-b .states,
+  #home-c .process,
+  #about-c .testimonials,
+  #work-a .items,
+  #contact-b .contact-info{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #home{
+    &-a{
+      .lead{
+       font-size: 1.2rem;
+       line-height: 1.5rem;
+       
+      }
+    }
+
+    &-b{
+      .states div{
+        border-bottom:none;
+      }
+    }
+
+    &-c{
+      .lead{
+       font-size: 1.2rem;
+       line-height: 1.5rem;
+      }
+    }
+
+  }
+
+      // ABOUT PAGE
+    #about{
+      &-a{
+        .about-info {
+          display: grid;
+          grid-template-areas:
+            'photo'
+            'bio'
+            'aw1'
+            'aw2'
+            'aw3';
+        }
+        .myphoto{
+          margin: auto;
+        }
+        .lead{
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+          padding: 0 1rem;
+         }
+         .award-1,
+         .award-2{
+          border-bottom: 1px dashed #ccc;
+         }
+      }
+
+      &-c{
+        .testimonials > div{
+          margin-top: 1.3rem;
+        }
+        
+      }
+    }
+
+
+
+      // WORK PAGE
+      .items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0.3rem;
+      
+        .item-text{
+          font-size: 2rem;
+          padding-top: 10%;
+
+          p{
+            padding-bottom: 1.2rem;
+          }
+
+        }
+
+      }
+
+          // CONTACT PAGE
+          #contact{
+     
+
+            &-b {
+              .contact-info {    
+                > * {
+                  line-height: 2rem;
+                  border-bottom: 1px dashed #ccc;
+                  padding: 1rem 0;
+
+                  &:last-child{
+                    border-bottom: none;
+                    padding-bottom: 0;
+                  }
+                }
+              }
+            }
+          
+          }
+
+
+
+  // FOOTER
+  #main-footer {
+
+    height: 7rem;
+  
+    .footer-content {
+      height: auto;
+      flex-direction: column;
+      line-height: 2rem;
+
+    }
+  }
+
+
+}

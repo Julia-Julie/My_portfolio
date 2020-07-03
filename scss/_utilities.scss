@@ -1,0 +1,79 @@
+.container {
+  max-width: 1100;
+  padding: 0 100px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.py-1 {
+  padding: 1rem;
+}
+
+.my-1 {
+  padding: 1rem;
+}
+
+%btn-shared {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1.3rem;
+  transition: ease 1s;
+}
+
+.btn {
+  &-light {
+    @extend %btn-shared;
+    color: yellow;
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+}
+
+.bg {
+  &-main {
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-light {
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-dark {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-secondary {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-family: $normal-font;
+}
+
+.line-bottom {
+  background: $secondary-color;
+  height: 2px;
+  width: 20%;
+  margin: auto;
+  margin-bottom: 1.15rem;
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background: $btn-inp-a-color;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px $main-color;
+}
